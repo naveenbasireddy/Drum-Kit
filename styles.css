@@ -2,110 +2,43 @@ body {
   text-align: center;
   background-color: #283149;
   margin: 0;
-  padding: 0%;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  position: fixed;
 }
 
 h1 {
   font-size: 5rem;
-  color: #DBEDF3;
+  color: #dbedf3;
   font-family: "Arvo", cursive;
-  text-shadow: 3px 0 #DA0463;
-
+  text-shadow: 3px 0 #da0463;
 }
 
 footer {
-  color: #DBEDF3;
+  color: #dbedf3;
   font-family: sans-serif;
 }
 
-.w {
-   background-image: url(./images/crash.png);
-}
-
-.w:hover,w:active{
-  color: hsl(208, 42%, 43%);
-
-}
-
-.a {
-   background-image: url(./images/kick.png);
-}
-
-.a:hover,a:active{
-  color: hsl(208, 42%, 43%);
-}
-
-.s {
-   background-image: url(./images/snare.png);
-  }
-
-  .s:hover,s:active{
-    color: hsl(208, 42%, 43%);
-
-  }
-
-.d {
-  background-image: url(./images/tom1.png);
-}
-
-.d:hover,d:active{
-  color: hsl(208, 42%, 43%);
-
-}
-
-.j {
-  background-image: url(./images/tom2.png);
-}
-
-.j:hover,j:active{
-  color: hsl(208, 42%, 43%);
-
-}
-
-.k {
-  background-image: url(./images/tom3.png);
-}
-
-.k:hover,k:active{
-  color: hsl(208, 42%, 43%);
-
-}
-
-.l {
-  background-image: url(./images/tom4.png);
-}
-
-.l:hover,w:active{
-  color: hsl(208, 42%, 43%);
-
-}
 .set {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
   margin: 8% auto;
-}
-
-.game-over {
-  background-color: red;
-  opacity: 0.8;
-}
-
-.pressed {
-  box-shadow: 0 3px 4px 0 #DBEDF3;
-  opacity: 0.5;
-}
-
-.red {
-  color: red;
+  justify-content: space-evenly;
 }
 
 .drum {
   outline: none;
-  border: 10px solid #404B69;
+  border: 10px solid #404b69;
   font-size: 5rem;
-  font-family: 'Arvo', cursive;
+  font-family: "Arvo", cursive;
   line-height: 2;
   font-weight: 900;
-  color: #DA0463;
-  text-shadow: 3px 0 #DBEDF3;
+  color: #da0463;
+  text-shadow: 3px 0 #dbedf3;
   border-radius: 15px;
   display: inline-block;
   width: 150px;
@@ -115,14 +48,125 @@ footer {
   background-color: white;
 }
 
+.w {
+  background-image: url(./images/crash.png);
+  background-repeat: no-repeat;
+}
+
+.w:hover,
+w:active {
+  color: hsl(208, 42%, 43%);
+}
+
+.a {
+  background-image: url(./images/kick.png);
+  background-repeat: no-repeat;
+}
+
+.a:hover,
+a:active {
+  color: hsl(208, 42%, 43%);
+}
+
+.s {
+  background-image: url(./images/snare.png);
+  background-repeat: no-repeat;
+}
+
+.s:hover,
+s:active {
+  color: hsl(208, 42%, 43%);
+}
+
+.d {
+  background-image: url(./images/tom1.png);
+  background-repeat: no-repeat;
+}
+
+.d:hover,
+d:active {
+  color: hsl(208, 42%, 43%);
+}
+
+.j {
+  background-image: url(./images/tom2.png);
+  background-repeat: no-repeat;
+}
+
+.j:hover,
+j:active {
+  color: hsl(208, 42%, 43%);
+}
+
+.k {
+  background-image: url(./images/tom3.png);
+  background-repeat: no-repeat;
+}
+
+.k:hover,
+k:active {
+  color: hsl(208, 42%, 43%);
+}
+
+.l {
+  background-image: url(./images/tom4.png);
+  background-repeat: no-repeat;
+}
+
+.l:hover,
+w:active {
+  color: hsl(208, 42%, 43%);
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #dbedf3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+footer {
+  font-size: small;
+}
+
 footer a {
   padding: 0% 1% 2%;
+  color: #404b69;
 }
+
 footer a:hover {
-  font-size: 20px;
-  color: aquamarine;
-}
-footer span {
   font-size: 15px;
+  color: aquamarine;
+  text-decoration: none;
+}
+
+footer span {
+  font-size: 10px;
   color: antiquewhite;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 4% auto;
+  }
+  .drum {
+    width: 100px;
+    height: 100px;
+    font-size: 4rem;
+    line-height: 1.2;
+  }
 }
