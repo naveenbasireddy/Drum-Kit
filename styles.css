@@ -27,7 +27,7 @@ footer {
   width: 100%;
   height: auto;
   margin: 8% auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .drum {
